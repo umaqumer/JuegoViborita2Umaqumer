@@ -64,23 +64,25 @@ document.addEventListener("keydown", function(event) {
  });
 
 function eliminarAumentar(){
-  v1.push(iau);v2.push(jau);//añadimos una nueva posicion a la cabeza
-  var r = verificarChoqueMuro();
-  if(r==1){alert("choque con el muro");alert("juego finalizado");return;}
-  r = verificarChoqueCuerpo();
-  if(r==1){alert("choque inesperado");alert("juego finalizado");return;}
-  var comer = ComioVibora();
-  if(comer == "comio"){
-    contarFrutosComidos++;
-    document.getElementById("frutosComidos").innerHTML = "<h3 style='color:orange'>Puntos: " + contarFrutosComidos + "</h3>";
-    verificarChoqueFruto();//generar un nuevo fruto
-    //v1.push(fr[0]);v2.push(fr[1]);//añadimos una nueva posicion a la cabeza
-  }else{
-    v1.shift();v2.shift();//eliminamos de la cola
+  if(finalizar==0){
+    v1.push(iau);v2.push(jau);//añadimos una nueva posicion a la cabeza
+    var r = verificarChoqueMuro();
+    if(r==1){alert("choque con el muro");alert("juego finalizado");return;}
+    r = verificarChoqueCuerpo();
+    if(r==1){alert("choque inesperado");alert("juego finalizado");return;}
+    var comer = ComioVibora();
+    if(comer == "comio"){
+      contarFrutosComidos++;
+      document.getElementById("frutosComidos").innerHTML = "<h3 style='color:orange'>Puntos: " + contarFrutosComidos + "</h3>";
+      verificarChoqueFruto();//generar un nuevo fruto
+      //v1.push(fr[0]);v2.push(fr[1]);//añadimos una nueva posicion a la cabeza
+    }else{
+      v1.shift();v2.shift();//eliminamos de la cola
+    }
+    var miDiv = document.getElementById("cuerpo");//eliminamos el div
+    miDiv.innerHTML = "";
+    pantalla();//mostramos la nueva serpiente
   }
-  var miDiv = document.getElementById("cuerpo");//eliminamos el div
-  miDiv.innerHTML = "";
-  pantalla();//mostramos la nueva serpiente
 }
 
 
