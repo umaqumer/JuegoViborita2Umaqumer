@@ -1,0 +1,62 @@
+body{
+			background: url(vi.jpg) no-repeat center center fixed;
+	 		background-size: cover;
+       background-color: rgba(255, 255, 255, 0.2);
+		}
+.formulario{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.titulo{
+  color: white;
+  text-align:center;
+  font-size: 35px;
+  text-shadow: 5px 2px 4px rgba(255, 0, 0, 0.5);
+}
+.cuerpo{
+    border-color: red;
+
+}
+.formulario{
+  padding: 50px;
+}
+.negro{
+  border-color: white;
+}.contenedor {
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+.boton {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: #3498db;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+#boton1 {
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#boton2 {
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+
+#boton3 {
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#boton4 {
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
