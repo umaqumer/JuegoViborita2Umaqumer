@@ -20,6 +20,7 @@ function reiniciar(){
   verificarChoqueFruto();
   pantalla();
 }
+ if(finalizar == 0){
 function boton1(){
   iau = iau-1;
  eliminarAumentar();
@@ -36,6 +37,7 @@ function boton4(){
   jau=jau+1;
   eliminarAumentar();
 }
+ }
 document.addEventListener("keydown", function(event) {
   if(finalizar == 0){
     switch(event.code) {
